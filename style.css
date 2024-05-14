@@ -1,0 +1,17 @@
+.container{
+    /* centering app horizontally */
+    display: flex;
+    justify-content: center;
+}
+#center{
+    /* centering app vertically */
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+
+
+    box-shadow: 5px 5px 15px rgb(77, 77, 77);
+    border-radius: 10px;
+    height: auto;
+    width: auto;
+}
