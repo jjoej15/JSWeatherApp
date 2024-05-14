@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="icon" type="image/png" href="images\favicon.png">
+</head>
+<body>
+    <div class="container">
+        <div id="center">
+            <input type="text" id="city-input" placeholder="Search City">
+            <button onclick="getWeather()">Get Weather</button>
+
+            <div id="city-name">Minneapolis</div>
+
+            <div class="container">
+                <div id="temperature">73</div>
+                <button id="fahrenheit-button" onclick="getWeatherF()">°F</button>
+                <button id="celsius-button" onclick="getWeatherC()">°C</button>
+            </div>
+
+            <div id="precipitation">Precipitation: 0%</div>
+            <div id="humidity">Humidity: 37%</div>
+            <div id="wind">Wind: 10 mph</div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
