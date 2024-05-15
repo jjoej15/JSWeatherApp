@@ -69,6 +69,9 @@
     background-color: rgb(125, 124, 124);
     margin: 0;
 }
+#icon-desc-wrapper{
+    margin: 0;
+}
 #weather-desc{
     margin: 0;
     text-align: center; 
