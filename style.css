@@ -87,7 +87,7 @@
     height: 125px;
     margin: 0;
 }
-#low, #high, #humidity, #wind{
+#feels-like, #humidity, #wind{
     text-align: center;
     margin: 5px;
     font-size: 17px;
