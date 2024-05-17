@@ -32,7 +32,8 @@
 }
 #city-input{
     width: 325px;
-    font-size: x-large;
+    font-size: large;
+    padding-left: 10px;
 }
 #get-weather-btn{
     background-color: rgb(66, 124, 206);
@@ -47,10 +48,10 @@
 }
 #city-name{
     text-align: center;
-    font-size: 2.5em;
+    font-size: 2.4em;
     margin: 20px;
 }
-#data-wrapper{
+#upper-data{
     display: flex;
     justify-content: center;
     height: 125px;
@@ -61,12 +62,17 @@
     margin-left: 15px;
 }
 #fahrenheit-btn, #celsius-btn{
-    color: rgb(255, 255, 255);
     border: none;
     height: 35px;
     font-size: 35px;
     background-color: rgb(125, 124, 124);
     margin: 0;
+}
+#fahrenheit-btn{
+    color: rgb(255, 255, 255);
+}
+#celsius-btn{
+    color: rgb(179, 179, 179);
 }
 #icon-desc-wrapper{
     margin: 0;
@@ -81,7 +87,7 @@
     height: 125px;
     margin: 0;
 }
-#precipitation, #humidity, #wind{
+#low, #high, #humidity, #wind{
     text-align: center;
     margin: 5px;
     font-size: 17px;
