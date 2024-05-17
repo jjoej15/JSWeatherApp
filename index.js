@@ -1,6 +1,9 @@
 import stateCodesMap from './stateCodes.js';
+import conf from './conf.js';
 
+const weatherApiKey = conf.API_KEY_WEATHER;
 let scale = "imperial";
+
 document.getElementById("city-input").addEventListener("keydown", event =>
     {
         if (event.key === "Enter") {
@@ -28,7 +31,7 @@ async function getWeather() {
     try {
         const [longitude, latitude, state] = await getCoords(cityInput);
 
-        const weatherResponse = await fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&APPID=32eaa5f8354a1d2504fac389b9254cd8&units=${scale}`);
+        const weatherResponse = await fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&APPID=${weatherApiKey}&units=${scale}`);
         const weatherData = await weatherResponse.json();
 
         const temp = Math.round(weatherData.main.temp);
@@ -80,11 +83,11 @@ async function getCoords(cityInput) {
     // Uses OpenWeather's geocoding API, in order to get lat/long coords of city
     let geolocationResponse;
     if (inputArr.length == 1) {
-        geolocationResponse = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${inputArr[0]}&appid=32eaa5f8354a1d2504fac389b9254cd8`);
+        geolocationResponse = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${inputArr[0]}&appid=${weatherApiKey}`);
     } else if (inputArr.length == 2) {
-        geolocationResponse = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${inputArr[0]},${inputArr[1]}&appid=32eaa5f8354a1d2504fac389b9254cd8`);
+        geolocationResponse = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${inputArr[0]},${inputArr[1]}&appid=${weatherApiKey}`);
     } else {
-        geolocationResponse = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${inputArr[0]},${inputArr[1]},${inputArr[2]}&appid=32eaa5f8354a1d2504fac389b9254cd8`);
+        geolocationResponse = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${inputArr[0]},${inputArr[1]},${inputArr[2]}&appid=${weatherApiKey}`);
     }
 
     if (!geolocationResponse.ok) {
