@@ -21,7 +21,7 @@
     height: auto;
     width: auto;
 }
-#city-input, #get-weather-btn{
+#city-input, #get-weather-btn, #curr-location-btn{
     vertical-align: middle;
     border: none;
     margin-top: 25px;
@@ -38,13 +38,24 @@
 #get-weather-btn{
     background-color: rgb(66, 124, 206);
     color: white;
-    margin-right: 10px;
-    width: 125px;
+    width: 75px;
     font-size: medium;
     transition: background-color 0.25s;
 }
+#curr-location-btn{
+    background-color: rgb(206, 183, 66);
+    color: white;
+    margin-left: 5px;
+    margin-right: 10px;
+    width: 90px;
+    font-size: medium;
+    transition: background-color 0.25s; 
+}
 #get-weather-btn:hover{
     background-color: rgb(72, 133, 219); 
+}
+#curr-location-btn:hover{
+    background-color: rgb(214, 194, 89);
 }
 #city-name{
     text-align: center;
